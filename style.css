@@ -1,0 +1,118 @@
+.box1{
+    background-color:#F5F2EA;
+color:black;
+border-radius: 24px;
+display: flex ;
+flex-direction: column;
+justify-content:space-between;
+}
+.box1 h1{
+    font-size: 132px;
+}
+.box1 p { 
+    font-size: 12px; 
+}
+.description { 
+    font-size: 16px; 
+}
+
+.box2 {
+    background-color:#181818 ;
+    color:white;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box3 {
+    background-color:#F5F2EA;
+    color: black;
+    border-radius: 24px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #D8D3C9;
+    font-family: 'Space Grotesk', sans-serif;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1.5fr 1.05fr 0.9fr;
+    grid-template-areas:
+        "intro skills project"
+        "intro about contact";
+}
+
+.box1{ grid-area: intro; }
+.box2{ grid-area: skills; }
+.box3{ grid-area: about; }
+.box4{ grid-area: project; }
+.box5{ grid-area: contact; }
+
+
+.box1, .box2, .box3, .box4, .box5{
+    padding: 28px;
+}
+
+
+.box1 h1{
+    margin-top: auto;
+}
+
+.box2 p, .box3 p, .label{
+    font-size: 12px;
+}
+
+.box2 h1{
+    font-size: clamp(36px, 4vw, 58px);
+}
+.box3 h1{
+    font-size: clamp(26px, 3vw, 38px);
+}
+
+.box4{
+    background-color: #D8FF45;
+    color: #181818;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box4 h1{
+    font-size: clamp(40px, 4.5vw, 58px);
+}
+
+.box5{
+    background-color: #6758F5;
+    color: white;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box5 h1{
+    font-size: clamp(34px, 4vw, 50px);
+}
+.box5 a{
+    color: white;
+}
+
+@media (max-width: 900px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "skills"
+            "project"
+            "about"
+            "contact";
+    }
+    .box1 h1{
+        font-size: 74px;
+    }
+}
